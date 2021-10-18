@@ -9,8 +9,8 @@
   </div>
 
   <div class="dialog-footer">
-    <button type="button" pButton label="save"></button>&nbsp;
-    <button type="button" pButton label="close" (click)="closeDialog()"></button>
+    <button type="button" pButton label="save" (click)="onClickDialog('success')"></button>&nbsp;
+    <button type="button" pButton label="close" (click)="onClickDialog('cancel')"></button>
   </div>
 </p-dialog>
 

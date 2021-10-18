@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
+import { PopupDialogService } from './popup-dialog/popup-dialog.service';
 
 @Component({
   selector: 'my-app',
@@ -9,7 +10,13 @@ import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
 export class AppComponent {
   @ViewChild(PopupDialogComponent, { static: false }) public popupDialogComponent: PopupDialogComponent;
 
+  constructor(private dialog: PopupDialogService) {}
+
   public showDialog() {
     this.popupDialogComponent.showDialog();
+
+    this.dialog.dialogRef.subscribe((data) => {
+      console.log(data, 'data');
+    });
   }
 }
