@@ -13,7 +13,7 @@ export class PopupDialogComponent {
 
   showDialog() {
     this.display = true;
-    this.dialog.setDialog(null);
+    this.dialog.setDialog('');
   }
 
   onClickDialog(data: string = null): any {

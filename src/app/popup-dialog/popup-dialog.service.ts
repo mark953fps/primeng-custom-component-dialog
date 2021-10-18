@@ -6,10 +6,10 @@ import { take } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class PopupDialogService {
-  private dialogData = new BehaviorSubject<any>(null);
+  private dialogData = new BehaviorSubject<any>('');
   public dialogRef = this.dialogData.asObservable();
 
-  public setDialog(data: any = null) {
+  public setDialog(data: any) {
     this.dialogData.next(data);
   }
 }
