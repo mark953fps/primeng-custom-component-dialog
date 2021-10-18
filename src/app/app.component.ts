@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { take } from 'rxjs/operators';
 import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
 import { PopupDialogService } from './popup-dialog/popup-dialog.service';
 
@@ -15,7 +16,9 @@ export class AppComponent {
   public showDialog() {
     this.popupDialogComponent.showDialog();
 
-    this.dialog.dialogRef.subscribe((data) => {
+    this.dialog.dialogRef
+    .pipe(take(2))
+    .subscribe((data) => {
       console.log(data, 'data');
     });
   }
