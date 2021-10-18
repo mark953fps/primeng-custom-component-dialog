@@ -17,6 +17,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
+import { DialogModule } from 'primeng/dialog';
+import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
 
 @NgModule({
   imports: [
@@ -37,8 +39,9 @@ import { InputTextModule } from 'primeng/inputtext';
     CalendarModule,
     InputTextModule,
     ReactiveFormsModule,
+    DialogModule,
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, PopupDialogComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
