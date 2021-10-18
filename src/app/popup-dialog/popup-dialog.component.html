@@ -1,7 +1,15 @@
 <p-dialog header="Confirmation" [(visible)]="display">
-  <div class="dialog-body">Content</div>
+  <div class="dialog-body">
+     <label style="width: 100px;">Username :</label>
+     <input type="text" pInputText />
+
+     <br><br>
+     <label style="width: 100px;">Password :</label>
+     <input type="text" pInputText />
+  </div>
 
   <div class="dialog-footer">
+    <button type="button" pButton label="save"></button>&nbsp;
     <button type="button" pButton label="close" (click)="closeDialog()"></button>
   </div>
 </p-dialog>
