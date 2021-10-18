@@ -1,19 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-popup-dialog',
   templateUrl: './popup-dialog.component.html',
   styleUrls: ['./popup-dialog.component.scss'],
 })
-export class PopupDialogComponent implements OnInit {
-  display: boolean = false;
-  @Input() public visible: boolean;
-
-  public ngOnInit() {}
+export class PopupDialogComponent {
+  @Input() public display: boolean = false;
 
   showDialog() {
     this.display = true;
   }
 
-  closeDialog() {}
+  closeDialog() {
+    this.display = false;
+  }
 }
